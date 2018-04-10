@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour {
 	float speed;
 
 	void Awake() {
-		speed = 0.1f;
+		speed = 0.05f;
 	}
 
 	void Update() {
