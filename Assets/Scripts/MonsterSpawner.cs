@@ -7,7 +7,11 @@ public class MonsterSpawner : MonoBehaviour {
 	public Vector2 motion;
 	public float delay;
 
+	AudioSource audioSource;
+
 	void Awake() {
+		audioSource = GetComponent<AudioSource> ();
+
 		StartCoroutine (SpawnMonster ());
 	}
 
@@ -17,6 +21,7 @@ public class MonsterSpawner : MonoBehaviour {
 			GameObject monster = Instantiate (monsterPrefab);
 			monster.transform.position = transform.position;
 			monster.GetComponent<Rigidbody2D> ().velocity = motion;
+			audioSource.Play ();
 		}
 	}
 }
