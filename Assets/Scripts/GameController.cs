@@ -24,6 +24,11 @@ public class GameController : MonoBehaviour {
 			SceneManager.LoadScene ("gameover");
 		}
 
+		//track this
+		if (Input.GetMouseButtonDown(0)) {
+			PersistentData.clicks++;
+		}
+
 		//update the texts
 		timerText.text = "Time Remaining: " + PersistentData.timer;
 		scoreText.text = "Score: " + PersistentData.score;

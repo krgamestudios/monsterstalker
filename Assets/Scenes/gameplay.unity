@@ -799,11 +799,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4910612253286244, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.25
+      value: -17.7
       objectReference: {fileID: 0}
     - target: {fileID: 4910612253286244, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4910612253286244, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
       propertyPath: m_LocalPosition.z
@@ -836,7 +836,7 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
@@ -852,7 +852,7 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
@@ -1413,7 +1413,7 @@ Prefab:
         type: 2}
       propertyPath: monsterPrefab
       value: 
-      objectReference: {fileID: 1876593924556066, guid: a3a482c56d8487d4182da0e0cb895726,
+      objectReference: {fileID: 1503669499646732, guid: 88b248131befdce4fab5316917b64b6a,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
