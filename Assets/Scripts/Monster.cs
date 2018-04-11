@@ -19,6 +19,7 @@ public class Monster : MonoBehaviour {
 			GameObject.Find ("SoundController").GetComponent<SoundController> ().PlaySnapShot ();
 			GameObject.Find ("Flash").GetComponent<Flash> ().StartFlash ();
 			PersistentData.score += value;
+			PersistentData.monsterNames.Add (gameObject.name);
 			Destroy (gameObject);
 		}
 	}
