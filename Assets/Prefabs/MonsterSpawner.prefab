@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4910612253286244}
-  - component: {fileID: 114508120021180596}
   - component: {fileID: 82296697716139720}
+  - component: {fileID: 114508120021180596}
   m_Layer: 0
   m_Name: MonsterSpawner
   m_TagString: Untagged
@@ -133,5 +133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 0}
+  monsterPrefab2: {fileID: 0}
+  monsterPrefab3: {fileID: 0}
+  monsterPrefab4: {fileID: 0}
+  twigOne: {fileID: 8300000, guid: a6733a38ded6d734c95864ed96cb77f7, type: 3}
+  twigTwo: {fileID: 8300000, guid: 4b32f873dc6db214998cb461007ca1e3, type: 3}
+  twigThree: {fileID: 8300000, guid: 3fd4efba0204a56448fe9430bf530db1, type: 3}
+  water: {fileID: 8300000, guid: ac24fd5439963184bb234aa526abcfc9, type: 3}
+  waterSoundOnly: 0
   motion: {x: 0, y: 0}
   delay: 5
+  lifespan: 4

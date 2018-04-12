@@ -493,6 +493,11 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: lifespan
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -836,7 +841,7 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
@@ -852,7 +857,17 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: waterSoundOnly
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: lifespan
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
@@ -905,7 +920,7 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.x
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
@@ -1402,7 +1417,7 @@ Prefab:
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
       propertyPath: motion.x
-      value: -5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
         type: 2}
@@ -1433,6 +1448,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1876593924556066, guid: a3a482c56d8487d4182da0e0cb895726,
         type: 2}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: lifespan
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
   m_IsPrefabParent: 0

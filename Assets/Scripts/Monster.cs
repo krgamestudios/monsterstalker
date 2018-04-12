@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour {
 	public int value;
+	public float lifespan {
+		set {
+			//hackfix
+			StartCoroutine (ReverseDirectionAfter (value / 2));
+			StartCoroutine (DestroySelfAfter (value));
+		}
+	}
 
 	Rigidbody2D rigidBody;
 
 	void Awake() {
 		rigidBody = GetComponent<Rigidbody2D> ();
-
-		StartCoroutine (ReverseDirectionAfter (2f));
-		StartCoroutine (DestroySelfAfter (4f));
 	}
 
 	void OnMouseOver() {

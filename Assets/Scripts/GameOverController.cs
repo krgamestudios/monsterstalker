@@ -87,6 +87,7 @@ public class GameOverController : MonoBehaviour {
 
 	IEnumerator OpeningCoroutine() {
 		yield return new WaitForSeconds (0.75f);
+		background.GetComponent<Animator> ().Play ("ending_opening", 0, 1f);
 		background.GetComponent<Animator> ().speed = 0;
 		JumpLeft ();
 		page++;

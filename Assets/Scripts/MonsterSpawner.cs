@@ -2,13 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Random = UnityEngine.Random;
+
 public class MonsterSpawner : MonoBehaviour {
 	public GameObject monsterPrefab;
 	public GameObject monsterPrefab2;
 	public GameObject monsterPrefab3;
 	public GameObject monsterPrefab4;
+
+	public AudioClip twigOne;
+	public AudioClip twigTwo;
+	public AudioClip twigThree;
+	public AudioClip water;
+	public bool waterSoundOnly = false;
+
 	public Vector2 motion;
 	public float delay;
+	public float lifespan;
 
 	AudioSource audioSource;
 
@@ -34,26 +44,53 @@ public class MonsterSpawner : MonoBehaviour {
 			GameObject monster = Instantiate (monsterPrefab);
 			monster.transform.position = transform.position;
 			monster.GetComponent<Rigidbody2D> ().velocity = motion;
-			audioSource.Play ();
+			monster.GetComponent<Monster> ().lifespan = lifespan;
+			PlaySound ();
 
 			//ugly duplication
 			yield return new WaitForSeconds (delay);
 			monster = Instantiate (monsterPrefab2);
 			monster.transform.position = transform.position;
 			monster.GetComponent<Rigidbody2D> ().velocity = motion;
-			audioSource.Play ();
+			monster.GetComponent<Monster> ().lifespan = lifespan;
+			PlaySound ();
 
 			yield return new WaitForSeconds (delay);
 			monster = Instantiate (monsterPrefab3);
 			monster.transform.position = transform.position;
 			monster.GetComponent<Rigidbody2D> ().velocity = motion;
-			audioSource.Play ();
+			monster.GetComponent<Monster> ().lifespan = lifespan;
+			PlaySound ();
 
 			yield return new WaitForSeconds (delay);
 			monster = Instantiate (monsterPrefab4);
 			monster.transform.position = transform.position;
 			monster.GetComponent<Rigidbody2D> ().velocity = motion;
-			audioSource.Play ();
+			monster.GetComponent<Monster> ().lifespan = lifespan;
+			PlaySound ();
 		}
+	}
+
+	void PlaySound() {
+		AudioClip audioClip = new AudioClip();
+
+		if (waterSoundOnly) {
+			audioClip = water;
+		} else {
+			int choice = Random.Range (0, 3);
+			switch(choice) {
+			case 0:
+				audioClip = twigOne;
+				break;
+			case 1:
+				audioClip = twigTwo;
+				break;
+			case 2:
+				audioClip = twigThree;
+				break;
+			}
+		}
+
+		audioSource.PlayOneShot (audioClip, 0.3f);
 	}
 }
