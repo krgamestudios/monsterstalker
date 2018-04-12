@@ -26,19 +26,22 @@ public class GameOverController : MonoBehaviour {
 		PersistentData.monsterNames = hs;
 
 		//load each image
-		float posX = 15f;
+		float posX = 12.1f;
 		foreach(string str in PersistentData.monsterNames) {
 			Sprite spr = Resources.Load ("photos/" + str, typeof(Sprite)) as Sprite;
 			GameObject obj = new GameObject ();
 			obj.AddComponent<SpriteRenderer> ();
 			obj.GetComponent<SpriteRenderer> ().sprite = spr;
-			obj.transform.localScale = new Vector3 (0.5f, 0.5f, 1f);
+			obj.transform.localScale = new Vector3 (0.3f, 0.3f, 1f);
 			obj.transform.position = new Vector3 (posX, 0, 0);
 			objectSet.Add (str, obj);
 
 			//increment
-			posX += 10f; //NOTE: code duplication
+			posX += 8.05f; //NOTE: code duplication
 		}
+
+		//pause the background animation
+		background.GetComponent<Animator>().speed = 0;
 	}
 
 	void Update() {
@@ -59,6 +62,11 @@ public class GameOverController : MonoBehaviour {
 				if (open == false) {
 					open = true;
 					//TODO: animate the background
+					background.GetComponent<Animator>().speed = 1;
+
+
+					StartCoroutine (OpeningCoroutine ());
+					return;
 				}
 				JumpLeft ();
 				page++;
@@ -69,7 +77,7 @@ public class GameOverController : MonoBehaviour {
 		if (open == false) {
 			scoreText.text = "Player's Score:       " + PersistentData.score + "\n";
 			scoreText.text += "Camera Clicks:        " + PersistentData.clicks + "\n";
-			scoreText.text += "Monsters Captured: " + PersistentData.monsterNames.Count + "/10";
+			scoreText.text += "Monsters Captured: " + PersistentData.monsterNames.Count + "/4";
 		} else {
 			scoreText.enabled = false;
 			creditText.enabled = false;
@@ -77,15 +85,22 @@ public class GameOverController : MonoBehaviour {
 		}
 	}
 
+	IEnumerator OpeningCoroutine() {
+		yield return new WaitForSeconds (0.75f);
+		background.GetComponent<Animator> ().speed = 0;
+		JumpLeft ();
+		page++;
+	}
+
 	void JumpLeft() {
 		foreach(KeyValuePair<string, GameObject> pair in objectSet) {
-			pair.Value.transform.position = new Vector3 (pair.Value.transform.position.x - 20f, 0, 0);
+			pair.Value.transform.position = new Vector3 (pair.Value.transform.position.x - 16.1f, 0.5f, 0);
 		}
 	}
 
 	void JumpRight() {
 		foreach(KeyValuePair<string, GameObject> pair in objectSet) {
-			pair.Value.transform.position = new Vector3 (pair.Value.transform.position.x + 20f, 0, 0);
+			pair.Value.transform.position = new Vector3 (pair.Value.transform.position.x + 16.1f, 0.5f, 0);
 		}
 	}
 }

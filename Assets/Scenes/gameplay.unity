@@ -1415,6 +1415,24 @@ Prefab:
       value: 
       objectReference: {fileID: 1503669499646732, guid: 88b248131befdce4fab5316917b64b6a,
         type: 2}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: monsterPrefab2
+      value: 
+      objectReference: {fileID: 1876593924556066, guid: a3a482c56d8487d4182da0e0cb895726,
+        type: 2}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: monsterPrefab3
+      value: 
+      objectReference: {fileID: 1503669499646732, guid: 88b248131befdce4fab5316917b64b6a,
+        type: 2}
+    - target: {fileID: 114508120021180596, guid: b16589ec086fe774ba4170ead0d42374,
+        type: 2}
+      propertyPath: monsterPrefab4
+      value: 
+      objectReference: {fileID: 1876593924556066, guid: a3a482c56d8487d4182da0e0cb895726,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16589ec086fe774ba4170ead0d42374, type: 2}
   m_IsPrefabParent: 0
