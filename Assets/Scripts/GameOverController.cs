@@ -32,7 +32,7 @@ public class GameOverController : MonoBehaviour {
 			GameObject obj = new GameObject ();
 			obj.AddComponent<SpriteRenderer> ();
 			obj.GetComponent<SpriteRenderer> ().sprite = spr;
-			obj.transform.localScale = new Vector3 (0.3f, 0.3f, 1f);
+			obj.transform.localScale = new Vector3 (0.25f, 0.25f, 1f);
 			obj.transform.position = new Vector3 (posX, 0, 0);
 			objectSet.Add (str, obj);
 
