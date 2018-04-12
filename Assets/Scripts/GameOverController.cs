@@ -9,13 +9,16 @@ public class GameOverController : MonoBehaviour {
 	public Text creditText;
 	public Text clickText;
 	public GameObject background;
+	public AudioClip albumOpens;
 
+	AudioSource audioSource;
 	Dictionary<string, GameObject> objectSet;
 
 	bool open = false;
 	int page = -1;
 
 	void Awake() {
+		audioSource = GetComponent<AudioSource> ();
 		objectSet = new Dictionary<string, GameObject> ();
 
 		//prune "(clone)" from each monster name
@@ -61,6 +64,7 @@ public class GameOverController : MonoBehaviour {
 			if (mouseX >= 0.5f && page < (objectSet.Count -1)/2) {
 				if (open == false) {
 					open = true;
+					audioSource.PlayOneShot (albumOpens, 1f);
 					//TODO: animate the background
 					background.GetComponent<Animator>().speed = 1;
 
