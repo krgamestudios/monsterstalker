@@ -81,7 +81,7 @@ public class GameOverController : MonoBehaviour {
 		if (open == false) {
 			scoreText.text = "Player's Score:       " + PersistentData.score + "\n";
 			scoreText.text += "Camera Clicks:        " + PersistentData.clicks + "\n";
-			scoreText.text += "Monsters Captured: " + PersistentData.monsterNames.Count + "/4";
+			scoreText.text += "Monsters Captured: " + PersistentData.monsterNames.Count + "/8";
 		} else {
 			scoreText.enabled = false;
 			creditText.enabled = false;

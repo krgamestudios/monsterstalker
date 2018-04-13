@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour {
 			Application.Quit ();
 		}
 
-		if (PersistentData.timer <= 0 || Input.GetKeyDown("space")) {
+		if (PersistentData.timer <= 0) {
 			SceneManager.LoadScene ("gameover");
 		}
 
